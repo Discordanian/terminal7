@@ -16,9 +16,9 @@ impl fmt::Debug for Cell {
             }
         } else {
             if self.destroy {
-                return write!(f, "*{}*", self.value);
+                write!(f, "*{}*", self.value)
             } else {
-                return write!(f, " {} ", self.value);
+                write!(f, " {} ", self.value)
             }
         }
     }
@@ -49,7 +49,6 @@ impl fmt::Display for GameGrid {
                 }
             }
             retval.push('\n');
-            // retval.push('\n');
         }
         retval.push_str("   [1][2][3][4][5][6][7]\n");
         write!(f, "{}", retval)
